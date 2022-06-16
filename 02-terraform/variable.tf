@@ -10,8 +10,9 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
-variable "key_pair" {
+variable "key_name" {
     description = "key to be associated to the instance"
-    default = ""
-  
+    type = string
+    default = "key"
+
 }
