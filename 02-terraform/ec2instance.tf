@@ -3,7 +3,9 @@ resource "aws_instance" "amazon" {
   instance_type = var.instance_type
   user_data = file("${path.module}/app1-install.sh")
   key_name = var.key_name
+  vpc_security_group_ids = [ aws_security_group.vpc-ssh.id ]
   tags = {
     "Name" = "EC2 DEMO"
   }
 }
+
