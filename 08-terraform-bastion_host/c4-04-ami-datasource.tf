@@ -4,7 +4,7 @@ data "aws_ami" "amzlinux2" {
   owners = [ "amazon" ]
   filter {
     name = "name"
-    values = [ "amzn2-ami-hvm-*-gp2" ]
+    values = [ "ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20220610" ]
   }
   filter {
     name = "root-device-type"
